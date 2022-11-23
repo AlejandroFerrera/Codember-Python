@@ -25,12 +25,3 @@ class TestEncrypt(unittest.TestCase):
     
 if __name__ == '__main__':
     unittest.main()
-
-
-# ['red', 'blue', 'red', 'blue', 'green'] -> 4, blue
-# ['green', 'red', 'blue', 'gray'] -> 2, gray
-# ['blue', 'blue', 'blue', 'blue'] -> 1, blue
-# ['red', 'green', 'red', 'green', 'red', 'green'] -> 6, green
-# ['blue', 'red', 'blue', 'red', 'gray'] -> 4, red
-# ['red', 'red', 'blue', 'red', 'red', 'red', 'green'] -> 3, red
-# ['red', 'blue', 'red', 'green', 'red', 'green', 'red', 'green'] -> 6, green
