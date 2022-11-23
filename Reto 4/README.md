@@ -9,6 +9,7 @@ He asked us for help. And he gave us some clues:
 - The number to the right is always greater than or equal to the one on the left.**
 
 He gave us some examples:
+
     55678 is correct, it fulfills everything
     12555 is correct, it fulfills everything
     55555 is correct, it fulfills everything
@@ -22,4 +23,4 @@ Send the solution with the command "submit", and the number of passwords that fu
 
 For example, for 87 results and the password 35522 in position 55 it would be:
 
-$ submit 87-35522
+submit 87-35522
