@@ -1,31 +1,35 @@
-def zebra(arr: list) -> tuple:
+def zebra(colors: list) -> list:
 
-    highest_count = 0
-    final_color = ''
-
-    last_color = ''
-    next_color = arr[0]
     counter = 1
+    highest_count = 0
+    highest_color = None
+    actual_color = colors[0]
 
+    for i in range(1, len(colors)):
 
-    for color in arr:
+        if colors[i] != actual_color:
+            actual_color = colors[i]
 
-        if (color != next_color or last_color == color):
-            counter = 1
-        
-        counter += 1
-        next_color = last_color
-        last_color = color
+            if colors[i - 2] == colors[i] and i >= 2:
+                counter += 1
+            else:
+                counter = 2
 
-        if counter > highest_count:
+        if counter >= highest_count:
             highest_count = counter
-            final_color = last_color
+            highest_color = actual_color
 
-    return [highest_count, final_color]
+    return [highest_count, highest_color]
 
-print(zebra(['red', 'blue', 'red', 'blue', 'green']))
+def str_data_to_list(input: str) -> list:
+    return input[1:-1].replace('"', '').replace(' ', '').replace('\n', '').split(',')
 
-    
-        
-                
+def main():
+    with open("colors.txt") as file:
+        str_colors = file.read().strip()
+        list_colors = str_data_to_list(str_colors)
+        result = zebra(list_colors)
+        print(result)
 
+if __name__ == "__main__":
+    main()

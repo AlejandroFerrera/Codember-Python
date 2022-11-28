@@ -7,6 +7,7 @@ def is_valid_password(password: int) -> bool:
     if code.count('5') < 2:
         return False
 
+    #Check for ascending sequence
     for i in range(1, len(code)):
         if code[i] < code[i - 1]:
             return False
