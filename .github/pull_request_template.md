@@ -10,7 +10,7 @@
 - 
 
 ## Screenshots si son necesarios.
-- 
+
 
 ## Otras consideraciones
 - 
