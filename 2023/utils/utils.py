@@ -23,5 +23,4 @@ def save_text_data(text_data, file_name):
 		file_name (str): The name of the file to save the text data to.
 	"""
 	with open(file_name, 'w') as f:
-		f.write(text_data)
-	
+		f.write(text_data)	
