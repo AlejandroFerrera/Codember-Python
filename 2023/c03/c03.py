@@ -20,7 +20,7 @@ def valid_keys(keys:list) -> int:
 	for key in keys:
 		if not _is_valid_key(key):
 			counter += 1
-		if counter == 42:
+		if counter == 13:
 			result = key
 	
 	return ( counter, result )
