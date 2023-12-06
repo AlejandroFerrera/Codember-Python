@@ -36,13 +36,12 @@ def extract_invalid_usernames(users_list: list) -> str:
 def is_valid_user(user_data: str) -> bool:
 	_, username, email, age, location = user_data.split(',')
 
-	print(f"{_ =}, {username=}, {email=}, {age=}, {location=}")
 	return all([
-	Attribute.is_valid_id(_),
-	Attribute.is_valid_username(username),
-	Attribute.is_valid_email(email),
-	Attribute.is_valid_age(age),
-	Attribute.is_valid_location(location)
+		Attribute.is_valid_id(_),
+		Attribute.is_valid_username(username),
+		Attribute.is_valid_email(email),
+		Attribute.is_valid_age(age),
+		Attribute.is_valid_location(location)
 	])
 
 if __name__ == '__main__':
